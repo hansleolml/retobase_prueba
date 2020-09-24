@@ -3,7 +3,7 @@ package arcmop.blog.springbootest.configuracion;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
-@SpringBootApplication(scanBasePackages = "arcmop.blog.springbootest")
+@SpringBootApplication(scanBasePackages = "arcmop.blog.springbootest.configuracion" )
 public class StartApplication {
 
 	public static void main(String[] args) {

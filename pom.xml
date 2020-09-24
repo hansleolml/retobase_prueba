@@ -23,6 +23,7 @@
         <cucumber-version>1.2.5</cucumber-version>
         <build.number>0</build.number>
         <build.implementation>SNAPSHOT</build.implementation>
+        <java.version>1.8</java.version>
     </properties>
     
     <parent>
@@ -38,8 +39,33 @@
             <version>3.7.0</version>
         </dependency>
         <dependency>
+            <groupId>org.sonarsource.java</groupId>
+            <artifactId>sonar-jacoco-listeners</artifactId>
+            <version>5.8.0.15699</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-actuator</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-data-jpa</artifactId>
+        </dependency>
+        <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-devtools</artifactId>
+            <scope>runtime</scope>
+        </dependency>
+        <dependency>
+            <groupId>com.h2database</groupId>
+            <artifactId>h2</artifactId>
+            <scope>runtime</scope>
         </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>
@@ -47,20 +73,11 @@
             <scope>test</scope>
         </dependency>
         <dependency>
-            <groupId>org.sonarsource.java</groupId>
-            <artifactId>sonar-jacoco-listeners</artifactId>
-            <version>5.8.0.15699</version>
-            <scope>test</scope>
-        </dependency>
-         <dependency>
             <groupId>mysql</groupId>
             <artifactId>mysql-connector-java</artifactId>
-            <scope>runtime</scope>
+            <version>8.0.18</version>
         </dependency>
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-data-jpa</artifactId>
-        </dependency>
+
     </dependencies>
     <build>
         <plugins>

@@ -5,6 +5,7 @@
  */
 package arcmop.blog.springbootest.controladores;
 
+import arcmop.blog.springbootest.configuracion.controladores.ControladorHolaMundo;
 import org.junit.After;
 import org.junit.AfterClass;
 import org.junit.Assert;

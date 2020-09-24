@@ -20,7 +20,7 @@ pipeline {
             steps {
                 script{
                     //customImage = docker.build(REPOSITORY_BD+":${env.BUILD_ID}/")
-                    sh 'docker build -t ${env.REPOSITORY_BD}:latest /mysql'
+                    sh 'docker build -t hansleolml/reto_tecnico_bd:latest ./mysql/'
                 }
             }
         }

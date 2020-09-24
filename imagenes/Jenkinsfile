@@ -24,6 +24,16 @@ pipeline {
                 }
             }
         }
+        stage('Push Docker') {
+            steps {
+                script {
+                    docker.withRegistry('',AZ_DOCKER_KEY_ID) {
+                        
+                        sh "docker push hansleolml/reto_tecnico_bd:latest"
+                    }
+                }
+            }
+        }
     }
     post { 
         always { 

@@ -1,0 +1,33 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: knote
+spec:
+  selector:
+    app: ibmprueba
+  ports:
+    - port: 80
+      targetPort: 3081
+  type: LoadBalancer
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: ibmprueba
+  labels:
+    app: ibmprueba 
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: ibmprueba
+  template:
+    metadata:
+      labels:
+        app: ibmprueba 
+    spec:
+      containers:
+      - name: ibmprueba 
+        image: hansleolml/reto_tecnico:latest
+        ports:
+        - containerPort: 3081
